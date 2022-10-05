@@ -1,13 +1,15 @@
 import React from "react";
-import {createNativeStackNavigator} from "@react-navigation/native-stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from "@react-navigation/native";
 import {
     Login,
     Catalog,
     Chat,
-    Home, 
+    Home,
     Settings,
-    SignUp
-}from "../Screens"
+    SignUp,
+    ViewNotification
+} from "../Screens"
 import ShowBottomTabs from "./BottomTaps";
 
 const Stack = createNativeStackNavigator()
@@ -15,42 +17,43 @@ const Stack = createNativeStackNavigator()
 export default props => (
     <Stack.Navigator
         initialRouteName="Login"
-        screenOptions={{headerShown: false}}
+        screenOptions={{ headerShown: false }}
     >
-        <Stack.Screen name="Login" component={Login}/>
-        <Stack.Screen name="Home" component={ShowBottomTabs}/>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Home" component={ShowBottomTabs} />
     </Stack.Navigator>
 )
 
-export function HomeNavigation(){
-    return(
+export function HomeNavigation() {
+    return (
         <Stack.Navigator>
             <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="Notificação" component={ViewNotification} />
         </Stack.Navigator>
     )
 }
 
-export function CatalogNavigation(){
-    return(
+export function CatalogNavigation() {
+    return (
         <Stack.Navigator>
             <Stack.Screen name="Catalogo" component={Catalog} />
         </Stack.Navigator>
     )
 }
 
-export function ChatNavigation(){
-    return(
+export function ChatNavigation() {
+    return (
         <Stack.Navigator>
             <Stack.Screen name="Chat" component={Chat} />
         </Stack.Navigator>
     )
 }
 
-export function SetiingsNavigation(){
-    return(
+export function SetiingsNavigation() {
+    return (
         <Stack.Navigator>
             <Stack.Screen name="Settings" component={Settings} />
-            <Stack.Screen name="SignUp" component={SignUp}/>
+            <Stack.Screen name="SignUp" component={SignUp} />
         </Stack.Navigator>
     )
 }

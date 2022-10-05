@@ -4,10 +4,10 @@ export default StyleSheet.create({
         flex:1,
         alignItems:"center",
         alignContent:"center",
-        backgroundColor:"#fff"
+        backgroundColor:"#000"
 
     },
     text:{
-        color:'#000'
+        color:'#fff'
     }
 })

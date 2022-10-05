@@ -4,6 +4,7 @@ import Home from "./Home";
 import Login from "./Login";
 import Settings from "./Settings";
 import SignUp from "./SignUp";
+import ViewNotification from "./ViewNotification";
 
 export{
     Catalog,
@@ -11,5 +12,6 @@ export{
     Home,
     Login,
     Settings,
-    SignUp
+    SignUp,
+    ViewNotification
 }
